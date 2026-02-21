@@ -30,6 +30,12 @@ const PORT = process.env.PORT || 5000;
 
 connectDB();
 
+// server.js ya app.js ke start mein
+console.log('🔍 Checking environment variables:');
+console.log('MONGODB_URI exists:', !!process.env.MONGODB_URI);
+console.log('MONGODB_URI length:', process.env.MONGODB_URI?.length);
+console.log('MONGODB_URI starts with:', process.env.MONGODB_URI?.substring(0, 20));
+
 // ===================== Helmet & Security =====================
 app.use(
   helmet({
