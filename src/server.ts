@@ -83,7 +83,7 @@ app.use(
       "http://localhost:5173", 
       "http://localhost:3000",
       // 🔥 Render frontend URL add karo agar hai to
-      process.env.FRONTEND_URL || "https://cloudrix-api.onrender.com"
+      process.env.FRONTEND_URL || "https://cloudrixsystems.com/"
     ].filter(Boolean),
     credentials: true
   })
