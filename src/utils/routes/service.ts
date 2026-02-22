@@ -1,4 +1,3 @@
-// routes/service.ts
 import { Router, Request, Response } from "express";
 
 const router = Router();
@@ -464,19 +463,58 @@ const services: Service[] = [
   }
 ];
 
+// ==================== HELPER FUNCTIONS ====================
+
+/**
+ * 🔥 Get base URL based on environment
+ * Production: Render URL ya custom domain
+ * Development: localhost
+ */
+const getBaseUrl = (): string => {
+  // Production (Render) URLs
+  if (process.env.NODE_ENV === 'production') {
+    // Render automatically provides this
+    if (process.env.RENDER_EXTERNAL_URL) {
+      return process.env.RENDER_EXTERNAL_URL;
+    }
+    // Custom domain agar ho to
+    if (process.env.CUSTOM_DOMAIN) {
+      return `https://${process.env.CUSTOM_DOMAIN}`;
+    }
+    // Default Render URL
+    return 'https://cloudrix-api.onrender.com';
+  }
+  
+  // Development
+  return process.env.HOST || 'http://localhost:5000';
+};
+
+/**
+ * 🔥 Get full image URL
+ */
+const getImageUrl = (imagePath: string): string => {
+  const baseUrl = getBaseUrl();
+  // Remove duplicate slashes
+  return `${baseUrl}/images/${imagePath}`.replace(/([^:]\/)\/+/g, '$1');
+};
+
 // Helper: build nested structure
-const buildTree = (flat: Service[], host: string): any[] => {
+const buildTree = (flat: Service[]): any[] => {
   const map: Record<string, any> = {};
   const roots: any[] = [];
 
   flat.forEach((s) => {
-    map[s.id] = { ...s, image: `/images/${s.image}`, children: [] };
+    map[s.id] = { 
+      ...s, 
+      image: getImageUrl(s.image), // 🔥 Proper image URL
+      children: [] 
+    };
   });
 
   flat.forEach((s) => {
-    if (s.parentId) {
+    if (s.parentId && map[s.parentId]) {
       map[s.parentId]?.children.push(map[s.id]);
-    } else {
+    } else if (!s.parentId) {
       roots.push(map[s.id]);
     }
   });
@@ -491,15 +529,19 @@ const buildTree = (flat: Service[], host: string): any[] => {
   return roots;
 };
 
-// GET /api/services (flat list)
+// ==================== API ENDPOINTS ====================
+
+/**
+ * GET /api/services - Flat list of all services
+ */
 router.get("/", (req: Request, res: Response) => {
   try {
     console.log("📥 GET /api/services - Fetching flat services list");
-    const host = process.env.HOST || `http://localhost:5173`;
-    const { visible } = req.query;
-
-    let list = [...services].map(s => ({ ...s, image: `${host}/public/images/${s.image}` }));
     
+    const { visible } = req.query;
+    let list = [...services];
+    
+    // Filter by visibility if requested
     if (typeof visible === "string") {
       const v = visible.toLowerCase();
       if (v === "true" || v === "1") {
@@ -507,22 +549,38 @@ router.get("/", (req: Request, res: Response) => {
       }
     }
 
-    console.log(`📤 Returning ${list.length} services (flat)`);
-    res.json(list);
+    // Add full image URLs
+    const enrichedList = list.map(s => ({
+      ...s,
+      image: getImageUrl(s.image)
+    }));
+
+    console.log(`📤 Returning ${enrichedList.length} services (flat)`);
+    res.json({
+      success: true,
+      count: enrichedList.length,
+      data: enrichedList
+    });
   } catch (error) {
     console.error("❌ Error in GET /api/services:", error);
-    res.status(500).json({ success: false, error: "Internal server error" });
+    res.status(500).json({ 
+      success: false, 
+      error: "Internal server error" 
+    });
   }
 });
 
-// GET /api/services/tree (nested tree)
+/**
+ * GET /api/services/tree - Nested tree structure
+ */
 router.get("/tree", (req: Request, res: Response) => {
   try {
     console.log("📥 GET /api/services/tree - Fetching services tree");
-    const host = process.env.HOST || `http://localhost:5173`;
+    
     const { visible } = req.query;
-
     let list = [...services];
+    
+    // Filter by visibility if requested
     if (typeof visible === "string") {
       const v = visible.toLowerCase();
       if (v === "true" || v === "1") {
@@ -530,20 +588,63 @@ router.get("/tree", (req: Request, res: Response) => {
       }
     }
 
-    const nested = buildTree(list, host);
-    console.log(`📤 Returning ${nested.length} parent services with children (tree)`);
+    const nested = buildTree(list);
     
     // Debug log
+    console.log(`📤 Returning ${nested.length} parent services:`);
     nested.forEach((parent) => {
       console.log(`  └─ ${parent.title} (${parent.children?.length || 0} children)`);
     });
     
-    res.json(nested);
+    res.json({
+      success: true,
+      count: nested.length,
+      data: nested
+    });
   } catch (error) {
     console.error("❌ Error in GET /api/services/tree:", error);
-    res.status(500).json({ success: false, error: "Internal server error" });
+    res.status(500).json({ 
+      success: false, 
+      error: "Internal server error" 
+    });
   }
 });
 
-// ✅ IMPORTANT: Export router at the bottom
+/**
+ * GET /api/services/:id - Get single service by ID
+ */
+router.get("/:id", (req: Request, res: Response) => {
+  try {
+    const { id } = req.params;
+    console.log(`📥 GET /api/services/${id} - Fetching single service`);
+    
+    const service = services.find(s => s.id === id);
+    
+    if (!service) {
+      return res.status(404).json({
+        success: false,
+        error: "Service not found"
+      });
+    }
+
+    // Add full image URL
+    const enrichedService = {
+      ...service,
+      image: getImageUrl(service.image)
+    };
+
+    res.json({
+      success: true,
+      data: enrichedService
+    });
+  } catch (error) {
+    console.error(`❌ Error in GET /api/services/${req.params.id}:`, error);
+    res.status(500).json({ 
+      success: false, 
+      error: "Internal server error" 
+    });
+  }
+});
+
+// ✅ IMPORTANT: Export router
 export default router;
