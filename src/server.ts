@@ -29,12 +29,14 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 connectDB();
-
-// server.js ya app.js ke start mein
-console.log('🔍 Checking environment variables:');
-console.log('MONGODB_URI exists:', !!process.env.MONGODB_URI);
-console.log('MONGODB_URI length:', process.env.MONGODB_URI?.length);
-console.log('MONGODB_URI starts with:', process.env.MONGODB_URI?.substring(0, 20));
+if (process.env.NODE_ENV !== 'production') {
+  // Development: .env file se load karo
+  dotenv.config({ path: path.resolve(__dirname, '../.env') });
+  console.log('📝 Development mode: .env file load ho rahi hai');
+} else {
+  // Production (Render): dotenv ko kuch mat karo, Render ke variables apne aap mil jayenge
+  console.log('🚀 Production mode: .env file skip ki ja rahi hai');
+}
 
 // ===================== Helmet & Security =====================
 app.use(
