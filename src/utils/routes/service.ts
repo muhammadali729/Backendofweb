@@ -21,7 +21,7 @@ const services: Service[] = [
   {
     id: "digital-marketing",
     slug: "digital-marketing",
-    image: "digital-marketing.jpg",
+    image: "digital-marketing.webp",
     title: "Digital Marketing",
     description: "Data-driven marketing — social ads, content strategy and analytics that drive measurable growth.",
     features: [],
@@ -34,7 +34,7 @@ const services: Service[] = [
   {
     id: "creative-design",
     slug: "creative-design-services",
-    image: "creative-design.jpg",
+    image: "creative-design.webp",
     title: "Creative Design Services",
     description: "Logos, UI/UX, marketing materials and full branding packages that tell your story visually.",
     features: [],
@@ -47,7 +47,7 @@ const services: Service[] = [
   {
     id: "website-dev",
     slug: "custom-website-development",
-    image: "website-dev.jpg",
+    image: "website-dev.webp",
     title: "Web & App Development",
     description: "Custom websites, mobile apps, and eCommerce platforms built to perform.",
     features: [],
@@ -60,7 +60,7 @@ const services: Service[] = [
   {
     id: "amazon-az",
     slug: "/management/amazon",
-    image: "amazon-az.jpg",
+    image: "amazon-az.webp",
     title: "Amazon A-Z Management",
     description: "Complete Amazon store management — product research, listing optimization, PPC campaigns and inventory control to boost sales.",
     features: [],
@@ -73,7 +73,7 @@ const services: Service[] = [
   {
     id: "ai-chatbot",
     slug: "ai-chatbot-development",
-    image: "ai-chatbot.jpg",
+    image: "ai-chatbot.webp",
     title: "AI Chatbot Development",
     description: "Conversational AI that automates support, qualifies leads and integrates with your CRM.",
     features: [],
@@ -88,7 +88,7 @@ const services: Service[] = [
   {
     id: "social-media",
     slug: "social-media-marketing",
-    image: "social-media.jpg",
+    image: "social-media.webp",
     title: "Social Media Marketing",
     description: "Content creation, scheduling and ads to grow your social presence and engagement.",
     features: [],
@@ -101,7 +101,7 @@ const services: Service[] = [
   {
     id: "ads-management",
     slug: "/digital-marketing?section=advertising",
-    image: "ads-management.jpg",
+    image: "ads-management.webp",
     title: "Advertising & Promotion",
     description: "Campaign creation and management across Google, Facebook and Amazon to drive targeted revenue.",
     features: [],
@@ -114,7 +114,7 @@ const services: Service[] = [
   {
     id: "seo",
     slug: "seo-optimization",
-    image: "seo.jpg",
+    image: "seo.webp",
     title: "SEO Optimization",
     description: "Technical and content SEO to increase organic visibility and improve rankings.",
     features: [],
@@ -129,7 +129,7 @@ const services: Service[] = [
   {
     id: "logo-design",
     slug: "logo-design",
-    image: "logo-design.jpg",
+    image: "logo-design.webp",
     title: "Logo Design",
     description: "Memorable, versatile logos and complete brand kits for consistent recognition across all channels.",
     features: [],
@@ -142,7 +142,7 @@ const services: Service[] = [
   {
     id: "book-cover",
     slug: "/creative-design?section=book-cover",
-    image: "book-cover.jpg",
+    image: "book-cover.webp",
     title: "Book Cover Design",
     description: "Attention-grabbing covers for eBook and print that fit your genre and marketing goals.",
     features: [],
@@ -155,7 +155,7 @@ const services: Service[] = [
   {
     id: "3d-models",
     slug: "/creative-design?section=three-d-model",
-    image: "3d-models.jpg",
+    image: "3d-models.webp",
     title: "3D Model Design",
     description: "High-quality 3D models for products, characters and games — optimized for render and real-time engines.",
     features: [],
@@ -168,7 +168,7 @@ const services: Service[] = [
   {
     id: "comic-art",
     slug: "/creative-design?section=comic-art",
-    image: "comic-art.jpg",
+    image: "comic-art.webp",
     title: "Comic Art Creation",
     description: "Comic-style illustrations, panel layouts and character art for stories, marketing and branding.",
     features: [],
@@ -181,7 +181,7 @@ const services: Service[] = [
   {
     id: "character-design",
     slug: "character-design",
-    image: "character-design.jpg",
+    image: "character-design.webp",
     title: "Character Design",
     description: "Unique characters for games, animation and branding with turnarounds and expression sheets.",
     features: [],
@@ -194,7 +194,7 @@ const services: Service[] = [
   {
     id: "anime-character",
     slug: "anime-character-design",
-    image: "anime-character.jpg",
+    image: "anime-character.webp",
     title: "Anime Character Design",
     description: "Anime-style characters with strong silhouettes, dynamic poses and clean linework.",
     features: [],
@@ -207,7 +207,7 @@ const services: Service[] = [
   {
     id: "reference-sheet",
     slug: "reference-sheet",
-    image: "reference-sheet.jpg",
+    image: "reference-sheet.webp",
     title: "Reference Sheet Design",
     description: "Full reference sheets for characters including front/side/back views, palettes and expression breakdowns.",
     features: [],
@@ -222,7 +222,7 @@ const services: Service[] = [
   {
     id: "website-dev-child",
     slug: "website-development",
-    image: "website-dev.jpg",
+    image: "website-dev.webp",
     title: "Custom Website Development",
     description: "Stunning, responsive websites built for performance and conversions.",
     features: [],
@@ -235,7 +235,7 @@ const services: Service[] = [
   {
     id: "mobile-app",
     slug: "app-development",
-    image: "mobile-app.jpg",
+    image: "mobile-app.webp",
     title: "Mobile App Development",
     description: "Native and cross-platform mobile apps with polished UX.",
     features: [],
@@ -248,7 +248,7 @@ const services: Service[] = [
   {
     id: "ecommerce",
     slug: "ecommerce-solutions",
-    image: "ecommerce.jpg",
+    image: "ecommerce.webp",
     title: "E-commerce Solutions",
     description: "End-to-end eCommerce stores — product setup, checkout, payment integration.",
     features: [],
@@ -261,7 +261,7 @@ const services: Service[] = [
   {
     id: "website-management",
     slug: "website-management",
-    image: "website-management.jpg",
+    image: "website-management.webp",
     title: "Website Management",
     description: "Ongoing site maintenance, updates, backups and security monitoring.",
     features: [],
@@ -276,7 +276,7 @@ const services: Service[] = [
   {
     id: "amazon-product-research",
     slug: "/management/amazon",
-    image: "amazon-product-research.jpg",
+    image: "amazon-product-research.webp",
     title: "Amazon Product Research",
     description: "In-depth market analysis, competitor research, and profitable product identification for Amazon success.",
     features: [],
@@ -289,7 +289,7 @@ const services: Service[] = [
   {
     id: "amazon-listing-optimization",
     slug: "/management/amazon",
-    image: "amazon-product-research.jpg",
+    image: "amazon-product-research.webp",
     title: "Amazon Listing Optimization",
     description: "SEO-optimized titles, bullet points, descriptions and A+ content to maximize visibility and conversions.",
     features: [],
@@ -302,7 +302,7 @@ const services: Service[] = [
   {
     id: "amazon-ppc-campaigns",
     slug: "/management/amazon",
-    image: "amazon-product-research.jpg",
+    image: "amazon-product-research.webp",
     title: "Amazon PPC Campaigns",
     description: "Strategic sponsored ads management to increase sales while maintaining profitable ACOS and ROAS.",
     features: [],
@@ -315,7 +315,7 @@ const services: Service[] = [
   {
     id: "amazon-inventory-management",
     slug: "/management/amazon",
-    image: "amazon-product-research.jpg",
+    image: "amazon-product-research.webp",
     title: "Amazon Inventory Management",
     description: "Smart inventory planning, FBA shipment coordination, and stock level optimization to prevent stockouts.",
     features: [],
@@ -330,7 +330,7 @@ const services: Service[] = [
   {
     id: "shopify-store-setup",
     slug: "/management/shopify",
-    image: "shopify-store-setup.jpg",
+    image: "shopify-store-setup.webp",
     title: "Shopify Store Setup",
     description: "Complete store creation with custom themes, payment integration, and conversion-optimized design.",
     features: [],
@@ -343,7 +343,7 @@ const services: Service[] = [
   {
     id: "shopify-app-integration",
     slug: "/management/shopify",
-    image: "mobile-app.jpg",
+    image: "mobile-app.webp",
     title: "Shopify App Integration",
     description: "Essential app installation and configuration for marketing, analytics, and customer support automation.",
     features: [],
@@ -356,7 +356,7 @@ const services: Service[] = [
   {
     id: "shopify-seo-optimization",
     slug: "seo-optimization",
-    image: "seo.jpg",
+    image: "seo.webp",
     title: "Shopify SEO Optimization",
     description: "On-page SEO, meta tags, schema markup, and site speed optimization for better search rankings.",
     features: [],
@@ -371,7 +371,7 @@ const services: Service[] = [
   {
     id: "tiktok-content-strategy",
     slug: "/management/tiktok",
-    image: "tiktok-management.jpg",
+    image: "tiktok-management.webp",
     title: "TikTok Management",
     description: "Viral content planning, trend analysis, and creative video concepts that engage your target audience.",
     features: [],
@@ -384,7 +384,7 @@ const services: Service[] = [
   {
     id: "tiktok-video-production",
     slug: "/management/tiktok",
-    image: "tiktok-management.jpg",
+    image: "tiktok-management.webp",
     title: "TikTok Video Production",
     description: "Professional video editing, effects, music sync, and storytelling for maximum engagement and shares.",
     features: [],
@@ -397,7 +397,7 @@ const services: Service[] = [
   {
     id: "tiktok-ads-management",
     slug: "/management/tiktok",
-    image: "tiktok-management.jpg",
+    image: "tiktok-management.webp",
     title: "TikTok Ads Management",
     description: "Targeted ad campaigns, audience optimization, and performance tracking to drive conversions and growth.",
     features: [],
@@ -412,7 +412,7 @@ const services: Service[] = [
   {
     id: "chatbot-overview",
     slug: "chatbot-service",
-    image: "chatbot-faq.jpg",
+    image: "chatbot-faq.webp",
     title: "Chatbot Overview",
     description: "Comprehensive AI chatbot capabilities, features, and benefits for automating customer interactions.",
     features: [],
@@ -425,7 +425,7 @@ const services: Service[] = [
   {
     id: "chatbot-integration",
     slug: "chatbot-integration",
-    image: "chatbot-integration.jpg",
+    image: "chatbot-integration.webp",
     title: "Chatbot Integration",
     description: "Seamless integration with your website, CRM, social media, and existing business systems.",
     features: [],
@@ -438,7 +438,7 @@ const services: Service[] = [
   {
     id: "chatbot-faq",
     slug: "chatbot-faq",
-    image: "chatbot-faq.jpg",
+    image: "chatbot-integration.webp",
     title: "Chatbot FAQ",
     description: "Common questions and answers about AI chatbot functionality, setup process, and ongoing support.",
     features: [],
@@ -451,7 +451,7 @@ const services: Service[] = [
   {
     id: "chatbot-pricing",
     slug: "chatbot-pricing",
-    image: "chatbot-pricing.png",
+    image: "chatbot-integration.webp",
     title: "Chatbot Pricing",
     description: "Transparent pricing plans for AI chatbot development, customization, and monthly maintenance packages.",
     features: [],
