@@ -13,42 +13,40 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
+const express_validator_1 = require("express-validator");
 const contact_1 = require("../model/contact");
-const email_1 = require("../email");
-const logger_1 = require("../logger");
+const email_1 = require("../../utils/email");
+const logger_1 = require("../../utils/logger");
 const auth_1 = require("../../middleware/auth");
 const router = express_1.default.Router();
-const { validationResult } = require("express-validator");
-const { body } = require("express-validator");
 router.post('/', [
-    body('name')
+    (0, express_validator_1.body)('name')
         .trim()
         .isLength({ min: 2, max: 100 })
         .withMessage('Name must be between 2 and 100 characters'),
-    body('email')
+    (0, express_validator_1.body)('email')
         .isEmail()
         .normalizeEmail()
         .withMessage('Please provide a valid email'),
-    body('phone')
+    (0, express_validator_1.body)('phone')
         .optional()
         .matches(/^[\+]?[1-9][\d]{0,15}$/)
         .withMessage('Please provide a valid phone number'),
-    body('service')
+    (0, express_validator_1.body)('service')
         .isIn(['amazon', 'website', 'mobile', 'design', 'chatbot', 'crm', 'saas', 'other'])
         .withMessage('Please select a valid service'),
-    body('message')
+    (0, express_validator_1.body)('message')
         .trim()
         .isLength({ min: 10, max: 2000 })
         .withMessage('Message must be between 10 and 2000 characters'),
 ], (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const errors = validationResult(req);
+        const errors = (0, express_validator_1.validationResult)(req);
         if (!errors.isEmpty()) {
-            res.status(400).json({
+            return res.status(400).json({
                 success: false,
                 errors: errors.array(),
             });
-            return;
         }
         const { name, email, phone, service, message } = req.body;
         // Create contact entry
@@ -113,15 +111,13 @@ router.post('/', [
 // @desc    Get all contacts (admin only)
 // @access  Private
 router.get('/', auth_1.auth, (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    var _a;
     try {
         // Check if user is admin
-        if (((_a = req.user) === null || _a === void 0 ? void 0 : _a.role) !== 'admin') {
-            res.status(403).json({
+        if (req.user.role !== 'admin') {
+            return res.status(403).json({
                 success: false,
                 error: 'Access denied',
             });
-            return;
         }
         const page = parseInt(req.query.page) || 1;
         const limit = parseInt(req.query.limit) || 10;
@@ -170,24 +166,21 @@ router.get('/', auth_1.auth, (req, res) => __awaiter(void 0, void 0, void 0, fun
 // @desc    Get contact by ID (admin only)
 // @access  Private
 router.get('/:id', auth_1.auth, (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    var _a;
     try {
         // Check if user is admin
-        if (((_a = req.user) === null || _a === void 0 ? void 0 : _a.role) !== 'admin') {
-            res.status(403).json({
+        if (req.user.role !== 'admin') {
+            return res.status(403).json({
                 success: false,
                 error: 'Access denied',
             });
-            return;
         }
         const contact = yield contact_1.Contact.findById(req.params.id)
             .populate('assignedTo', 'name email');
         if (!contact) {
-            res.status(404).json({
+            return res.status(404).json({
                 success: false,
                 error: 'Contact not found',
             });
-            return;
         }
         res.json({
             success: true,
@@ -206,49 +199,45 @@ router.get('/:id', auth_1.auth, (req, res) => __awaiter(void 0, void 0, void 0, 
 // @desc    Update contact (admin only)
 // @access  Private
 router.put('/:id', auth_1.auth, [
-    body('status')
+    (0, express_validator_1.body)('status')
         .optional()
         .isIn(['new', 'contacted', 'qualified', 'converted', 'lost'])
         .withMessage('Invalid status'),
-    body('priority')
+    (0, express_validator_1.body)('priority')
         .optional()
         .isIn(['low', 'medium', 'high'])
         .withMessage('Invalid priority'),
-    body('notes')
+    (0, express_validator_1.body)('notes')
         .optional()
         .isLength({ max: 1000 })
         .withMessage('Notes cannot be more than 1000 characters'),
-    body('followUpDate')
+    (0, express_validator_1.body)('followUpDate')
         .optional()
         .isISO8601()
         .withMessage('Invalid date format'),
 ], (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    var _a;
     try {
-        const errors = validationResult(req);
+        const errors = (0, express_validator_1.validationResult)(req);
         if (!errors.isEmpty()) {
-            res.status(400).json({
+            return res.status(400).json({
                 success: false,
                 errors: errors.array(),
             });
-            return;
         }
         // Check if user is admin
-        if (((_a = req.user) === null || _a === void 0 ? void 0 : _a.role) !== 'admin') {
-            res.status(403).json({
+        if (req.user.role !== 'admin') {
+            return res.status(403).json({
                 success: false,
                 error: 'Access denied',
             });
-            return;
         }
         const { status, priority, notes, followUpDate, assignedTo } = req.body;
         const contact = yield contact_1.Contact.findById(req.params.id);
         if (!contact) {
-            res.status(404).json({
+            return res.status(404).json({
                 success: false,
                 error: 'Contact not found',
             });
-            return;
         }
         // Update fields
         if (status)
@@ -280,23 +269,20 @@ router.put('/:id', auth_1.auth, [
 // @desc    Delete contact (admin only)
 // @access  Private
 router.delete('/:id', auth_1.auth, (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    var _a;
     try {
         // Check if user is admin
-        if (((_a = req.user) === null || _a === void 0 ? void 0 : _a.role) !== 'admin') {
-            res.status(403).json({
+        if (req.user.role !== 'admin') {
+            return res.status(403).json({
                 success: false,
                 error: 'Access denied',
             });
-            return;
         }
         const contact = yield contact_1.Contact.findByIdAndDelete(req.params.id);
         if (!contact) {
-            res.status(404).json({
+            return res.status(404).json({
                 success: false,
                 error: 'Contact not found',
             });
-            return;
         }
         res.json({
             success: true,
@@ -315,15 +301,13 @@ router.delete('/:id', auth_1.auth, (req, res) => __awaiter(void 0, void 0, void 
 // @desc    Get contact statistics (admin only)
 // @access  Private
 router.get('/stats/summary', auth_1.auth, (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    var _a;
     try {
         // Check if user is admin
-        if (((_a = req.user) === null || _a === void 0 ? void 0 : _a.role) !== 'admin') {
-            res.status(403).json({
+        if (req.user.role !== 'admin') {
+            return res.status(403).json({
                 success: false,
                 error: 'Access denied',
             });
-            return;
         }
         const totalContacts = yield contact_1.Contact.countDocuments();
         const newContacts = yield contact_1.Contact.countDocuments({ status: 'new' });

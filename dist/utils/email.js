@@ -29,7 +29,7 @@ const sendEmail = (options) => __awaiter(void 0, void 0, void 0, function* () {
         });
         // Email options
         const mailOptions = {
-            from: process.env.EMAIL_FROM || 'TechDev.inc <noreply@techdev.inc>',
+            from: process.env.EMAIL_FROM || 'support@cloudrixsystems.com',
             to: options.to,
             subject: options.subject,
             html: options.html,

@@ -207,3 +207,12 @@
 2026-01-18 02:10:29:1029 [31merror[39m: [31m❌ Database connection failed: Server selection timed out after 30000 ms[39m
 2026-01-18 02:33:24:3324 [31merror[39m: [31m❌ Database connection failed: Server selection timed out after 30000 ms[39m
 2026-01-18 13:17:34:1734 [31merror[39m: [31m❌ Database connection failed: Server selection timed out after 30000 ms[39m
+2026-05-10 14:31:54:3154 [31merror[39m: [31m❌ Database connection failed: querySrv ECONNREFUSED _mongodb._tcp.cloudrixsystems.nd9cnwb.mongodb.net[39m
+2026-05-10 14:49:28:4928 [31merror[39m: [31m❌ Database connection failed: querySrv ECONNREFUSED _mongodb._tcp.cloudrixsystems.nd9cnwb.mongodb.net[39m
+2026-05-10 15:18:33:1833 [31merror[39m: [31m❌ Database connection failed: querySrv ECONNREFUSED _mongodb._tcp.cloudrixsystems.nd9cnwb.mongodb.net[39m
+2026-05-10 15:51:46:5146 [31merror[39m: [31m❌ Database connection failed: querySrv ECONNREFUSED _mongodb._tcp.cloudrixsystems.nd9cnwb.mongodb.net[39m
+2026-05-11 13:25:35:2535 [31merror[39m: [31m❌ Database connection failed: querySrv ECONNREFUSED _mongodb._tcp.cloudrixsystems.nd9cnwb.mongodb.net[39m
+2026-05-11 14:18:37:1837 [31merror[39m: [31m❌ Database connection failed: querySrv ECONNREFUSED _mongodb._tcp.cloudrixsystems.nd9cnwb.mongodb.net[39m
+2026-05-17 10:15:03:153 [31merror[39m: [31m❌ Database connection failed: querySrv ECONNREFUSED _mongodb._tcp.cloudrixsystems.nd9cnwb.mongodb.net[39m
+2026-05-23 19:25:42:2542 [31merror[39m: [31m❌ Database connection failed: querySrv ECONNREFUSED _mongodb._tcp.cloudrixsystems.nd9cnwb.mongodb.net[39m
+2026-05-23 20:19:23:1923 [31merror[39m: [31m❌ Database connection failed: querySrv ECONNREFUSED _mongodb._tcp.cloudrixsystems.nd9cnwb.mongodb.net[39m

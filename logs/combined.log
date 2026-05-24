@@ -2273,3 +2273,151 @@
 2026-02-17 22:00:18:018 [32minfo[39m: [32m✅ MongoDB Connected: 127.0.0.1[39m
 2026-02-17 22:01:34:134 [32minfo[39m: [32m::1 - - [17/Feb/2026:17:01:34 +0000] "GET /api/services/tree?visible=true HTTP/1.1" 200 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"[39m
 2026-02-17 22:01:34:134 [32minfo[39m: [32m::1 - - [17/Feb/2026:17:01:34 +0000] "GET /api/services/tree?visible=true HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"[39m
+2026-02-22 07:11:19:1119 [32minfo[39m: [32m🚀 Server running on http://localhost:5000[39m
+2026-02-22 07:11:47:1147 [32minfo[39m: [32m🚀 Server running on http://localhost:5000[39m
+2026-02-22 07:11:50:1150 [32minfo[39m: [32m✅ MongoDB Connected: ac-h1sm48n-shard-00-02.nd9cnwb.mongodb.net[39m
+2026-02-22 07:16:18:1618 [32minfo[39m: [32m🚀 Server running in development mode[39m
+2026-02-22 07:16:18:1618 [32minfo[39m: [32m📡 Listening on port 5000[39m
+2026-02-22 07:16:18:1618 [32minfo[39m: [32m📍 Health check: http://localhost:5000/health[39m
+2026-02-22 07:16:21:1621 [32minfo[39m: [32m✅ MongoDB Connected: ac-h1sm48n-shard-00-01.nd9cnwb.mongodb.net[39m
+2026-02-22 07:16:56:1656 [32minfo[39m: [32m🚀 Server running on http://localhost:5000[39m
+2026-02-22 07:16:59:1659 [32minfo[39m: [32m✅ MongoDB Connected: ac-h1sm48n-shard-00-01.nd9cnwb.mongodb.net[39m
+2026-02-22 07:17:41:1741 [32minfo[39m: [32m🚀 Server running in development mode[39m
+2026-02-22 07:17:41:1741 [32minfo[39m: [32m📡 Listening on port 5000[39m
+2026-02-22 07:17:41:1741 [32minfo[39m: [32m📍 Health check: http://localhost:5000/health[39m
+2026-02-22 07:17:41:1741 [32minfo[39m: [32m📍 Public URL: https://cloudrix-api.onrender.com[39m
+2026-02-22 07:17:44:1744 [32minfo[39m: [32m✅ MongoDB Connected: ac-h1sm48n-shard-00-02.nd9cnwb.mongodb.net[39m
+2026-02-26 23:51:04:514 [32minfo[39m: [32m🚀 Server running in development mode[39m
+2026-02-26 23:51:04:514 [32minfo[39m: [32m📡 Listening on port 5000[39m
+2026-02-26 23:51:04:514 [32minfo[39m: [32m📍 Health check: http://localhost:5000/health[39m
+2026-02-26 23:51:04:514 [32minfo[39m: [32m📍 Public URL: https://cloudrix-api.onrender.com[39m
+2026-02-26 23:51:07:517 [32minfo[39m: [32m✅ MongoDB Connected: ac-h1sm48n-shard-00-00.nd9cnwb.mongodb.net[39m
+2026-03-11 06:52:34:5234 [32minfo[39m: [32m🚀 Server running in development mode[39m
+2026-03-11 06:52:34:5234 [32minfo[39m: [32m📡 Listening on port 5000[39m
+2026-03-11 06:52:34:5234 [32minfo[39m: [32m📍 Health check: http://localhost:5000/health[39m
+2026-03-11 06:52:34:5234 [32minfo[39m: [32m📍 Public URL: https://cloudrix-api.onrender.com[39m
+2026-03-11 06:52:36:5236 [32minfo[39m: [32m✅ MongoDB Connected: ac-h1sm48n-shard-00-00.nd9cnwb.mongodb.net[39m
+2026-03-11 07:52:49:5249 [32minfo[39m: [32m🔄 MongoDB reconnected[39m
+2026-03-11 07:52:50:5250 [32minfo[39m: [32m🔄 MongoDB reconnected[39m
+2026-03-11 07:55:32:5532 [33mwarn[39m: [33m⚠️ MongoDB disconnected[39m
+2026-03-11 07:55:33:5533 [32minfo[39m: [32m🔄 MongoDB reconnected[39m
+2026-03-12 05:42:33:4233 [32minfo[39m: [32m🔄 MongoDB reconnected[39m
+2026-03-12 05:42:36:4236 [32minfo[39m: [32m🔄 MongoDB reconnected[39m
+2026-03-12 05:42:58:4258 [33mwarn[39m: [33m⚠️ MongoDB disconnected[39m
+2026-03-12 05:43:00:430 [32minfo[39m: [32m🔄 MongoDB reconnected[39m
+2026-03-14 17:02:16:216 [32minfo[39m: [32m🔄 MongoDB reconnected[39m
+2026-03-14 17:02:38:238 [33mwarn[39m: [33m⚠️ MongoDB disconnected[39m
+2026-03-14 17:02:46:246 [32minfo[39m: [32m🔄 MongoDB reconnected[39m
+2026-03-14 17:13:37:1337 [32minfo[39m: [32m🚀 Server running in development mode[39m
+2026-03-14 17:13:37:1337 [32minfo[39m: [32m📡 Listening on port 5000[39m
+2026-03-14 17:13:37:1337 [32minfo[39m: [32m📍 Health check: http://localhost:5000/health[39m
+2026-03-14 17:13:37:1337 [32minfo[39m: [32m📍 Public URL: https://cloudrix-api.onrender.com[39m
+2026-03-14 17:13:44:1344 [32minfo[39m: [32m✅ MongoDB Connected: ac-h1sm48n-shard-00-02.nd9cnwb.mongodb.net[39m
+2026-03-15 02:16:18:1618 [32minfo[39m: [32m🔄 MongoDB reconnected[39m
+2026-03-15 02:44:57:4457 [32minfo[39m: [32m🚀 Server running in development mode[39m
+2026-03-15 02:44:57:4457 [32minfo[39m: [32m📡 Listening on port 5000[39m
+2026-03-15 02:44:57:4457 [32minfo[39m: [32m📍 Health check: http://localhost:5000/health[39m
+2026-03-15 02:44:57:4457 [32minfo[39m: [32m📍 Public URL: https://cloudrix-api.onrender.com[39m
+2026-03-15 02:45:00:450 [32minfo[39m: [32m✅ MongoDB Connected: ac-h1sm48n-shard-00-00.nd9cnwb.mongodb.net[39m
+2026-05-02 06:46:47:4647 [32minfo[39m: [32m🚀 Server running in development mode[39m
+2026-05-02 06:46:47:4647 [32minfo[39m: [32m📡 Listening on port 5000[39m
+2026-05-02 06:46:47:4647 [32minfo[39m: [32m📍 Health check: http://localhost:5000/health[39m
+2026-05-02 06:46:47:4647 [32minfo[39m: [32m📍 Public URL: https://cloudrix-api.onrender.com[39m
+2026-05-02 06:46:50:4650 [32minfo[39m: [32m✅ MongoDB Connected: ac-h1sm48n-shard-00-00.nd9cnwb.mongodb.net[39m
+2026-05-02 09:55:07:557 [32minfo[39m: [32m🔄 MongoDB reconnected[39m
+2026-05-02 09:55:07:557 [32minfo[39m: [32m🔄 MongoDB reconnected[39m
+2026-05-09 16:20:33:2033 [33mwarn[39m: [33m⚠️ MongoDB disconnected[39m
+2026-05-09 16:20:33:2033 [32minfo[39m: [32m🔄 MongoDB reconnected[39m
+2026-05-09 16:35:37:3537 [32minfo[39m: [32m🔄 MongoDB reconnected[39m
+2026-05-09 16:35:37:3537 [32minfo[39m: [32m🔄 MongoDB reconnected[39m
+2026-05-09 16:35:48:3548 [33mwarn[39m: [33m⚠️ MongoDB disconnected[39m
+2026-05-09 16:35:48:3548 [32minfo[39m: [32m🔄 MongoDB reconnected[39m
+2026-05-09 16:38:09:389 [32minfo[39m: [32m🔄 MongoDB reconnected[39m
+2026-05-09 16:38:20:3820 [33mwarn[39m: [33m⚠️ MongoDB disconnected[39m
+2026-05-09 16:38:20:3820 [32minfo[39m: [32m🔄 MongoDB reconnected[39m
+2026-05-09 16:39:11:3911 [32minfo[39m: [32m🔄 MongoDB reconnected[39m
+2026-05-09 16:44:03:443 [33mwarn[39m: [33m⚠️ MongoDB disconnected[39m
+2026-05-09 16:44:03:443 [32minfo[39m: [32m🔄 MongoDB reconnected[39m
+2026-05-09 16:45:04:454 [32minfo[39m: [32m🔄 MongoDB reconnected[39m
+2026-05-09 19:46:11:4611 [33mwarn[39m: [33m⚠️ MongoDB disconnected[39m
+2026-05-10 02:43:17:4317 [32minfo[39m: [32m🔄 MongoDB reconnected[39m
+2026-05-10 02:48:08:488 [33mwarn[39m: [33m⚠️ MongoDB disconnected[39m
+2026-05-10 02:48:20:4820 [32minfo[39m: [32m🔄 MongoDB reconnected[39m
+2026-05-10 02:52:59:5259 [32minfo[39m: [32m🔄 MongoDB reconnected[39m
+2026-05-10 02:53:00:530 [32minfo[39m: [32m🔄 MongoDB reconnected[39m
+2026-05-10 02:53:10:5310 [33mwarn[39m: [33m⚠️ MongoDB disconnected[39m
+2026-05-10 02:53:11:5311 [32minfo[39m: [32m🔄 MongoDB reconnected[39m
+2026-05-10 02:57:09:579 [32minfo[39m: [32m🔄 MongoDB reconnected[39m
+2026-05-10 03:02:48:248 [32minfo[39m: [32m🔄 MongoDB reconnected[39m
+2026-05-10 03:02:48:248 [32minfo[39m: [32m🔄 MongoDB reconnected[39m
+2026-05-10 03:11:11:1111 [33mwarn[39m: [33m⚠️ MongoDB disconnected[39m
+2026-05-10 03:11:12:1112 [32minfo[39m: [32m🔄 MongoDB reconnected[39m
+2026-05-10 03:14:34:1434 [32minfo[39m: [32m🔄 MongoDB reconnected[39m
+2026-05-10 03:14:34:1434 [32minfo[39m: [32m🔄 MongoDB reconnected[39m
+2026-05-10 03:17:36:1736 [32minfo[39m: [32m🔄 MongoDB reconnected[39m
+2026-05-10 03:17:58:1758 [33mwarn[39m: [33m⚠️ MongoDB disconnected[39m
+2026-05-10 03:17:58:1758 [32minfo[39m: [32m🔄 MongoDB reconnected[39m
+2026-05-10 03:20:31:2031 [32minfo[39m: [32m🔄 MongoDB reconnected[39m
+2026-05-10 03:20:31:2031 [32minfo[39m: [32m🔄 MongoDB reconnected[39m
+2026-05-10 03:23:29:2329 [33mwarn[39m: [33m⚠️ MongoDB disconnected[39m
+2026-05-10 03:23:38:2338 [32minfo[39m: [32m🔄 MongoDB reconnected[39m
+2026-05-10 03:31:17:3117 [32minfo[39m: [32m🔄 MongoDB reconnected[39m
+2026-05-10 03:31:19:3119 [32minfo[39m: [32m🔄 MongoDB reconnected[39m
+2026-05-10 03:31:41:3141 [33mwarn[39m: [33m⚠️ MongoDB disconnected[39m
+2026-05-10 03:32:05:325 [32minfo[39m: [32m🔄 MongoDB reconnected[39m
+2026-05-10 03:34:46:3446 [32minfo[39m: [32m🔄 MongoDB reconnected[39m
+2026-05-10 03:37:21:3721 [33mwarn[39m: [33m⚠️ MongoDB disconnected[39m
+2026-05-10 03:37:27:3727 [32minfo[39m: [32m🔄 MongoDB reconnected[39m
+2026-05-10 03:50:53:5053 [33mwarn[39m: [33m⚠️ MongoDB disconnected[39m
+2026-05-10 03:51:09:519 [32minfo[39m: [32m🔄 MongoDB reconnected[39m
+2026-05-10 03:54:34:5434 [33mwarn[39m: [33m⚠️ MongoDB disconnected[39m
+2026-05-10 03:54:45:5445 [32minfo[39m: [32m🔄 MongoDB reconnected[39m
+2026-05-10 03:55:16:5516 [32minfo[39m: [32m🔄 MongoDB reconnected[39m
+2026-05-10 03:55:16:5516 [32minfo[39m: [32m🔄 MongoDB reconnected[39m
+2026-05-10 03:55:40:5540 [33mwarn[39m: [33m⚠️ MongoDB disconnected[39m
+2026-05-10 03:55:45:5545 [32minfo[39m: [32m🔄 MongoDB reconnected[39m
+2026-05-10 14:31:54:3154 [32minfo[39m: [32m🚀 Server running in development mode[39m
+2026-05-10 14:49:28:4928 [32minfo[39m: [32m🚀 Server running in development mode[39m
+2026-05-10 14:49:28:4928 [32minfo[39m: [32m📡 Listening on port 5000[39m
+2026-05-10 14:49:28:4928 [32minfo[39m: [32m📍 Health check: http://localhost:5000/health[39m
+2026-05-10 14:49:28:4928 [32minfo[39m: [32m📍 Public URL: https://cloudrix-api.onrender.com[39m
+2026-05-10 14:49:28:4928 [31merror[39m: [31m❌ Database connection failed: querySrv ECONNREFUSED _mongodb._tcp.cloudrixsystems.nd9cnwb.mongodb.net[39m
+2026-05-10 15:18:33:1833 [32minfo[39m: [32m🚀 Server running in development mode[39m
+2026-05-10 15:18:33:1833 [32minfo[39m: [32m📡 Listening on port 5000[39m
+2026-05-10 15:18:33:1833 [32minfo[39m: [32m📍 Health check: http://localhost:5000/health[39m
+2026-05-10 15:18:33:1833 [32minfo[39m: [32m📍 Public URL: https://cloudrix-api.onrender.com[39m
+2026-05-10 15:18:33:1833 [31merror[39m: [31m❌ Database connection failed: querySrv ECONNREFUSED _mongodb._tcp.cloudrixsystems.nd9cnwb.mongodb.net[39m
+2026-05-10 15:51:46:5146 [32minfo[39m: [32m🚀 Server running in development mode[39m
+2026-05-10 15:51:46:5146 [32minfo[39m: [32m📡 Listening on port 5000[39m
+2026-05-10 15:51:46:5146 [32minfo[39m: [32m📍 Health check: http://localhost:5000/health[39m
+2026-05-10 15:51:46:5146 [32minfo[39m: [32m📍 Public URL: https://cloudrix-api.onrender.com[39m
+2026-05-10 15:51:46:5146 [31merror[39m: [31m❌ Database connection failed: querySrv ECONNREFUSED _mongodb._tcp.cloudrixsystems.nd9cnwb.mongodb.net[39m
+2026-05-11 13:25:35:2535 [32minfo[39m: [32m🚀 Server running in development mode[39m
+2026-05-11 13:25:35:2535 [32minfo[39m: [32m📡 Listening on port 5000[39m
+2026-05-11 13:25:35:2535 [32minfo[39m: [32m📍 Health check: http://localhost:5000/health[39m
+2026-05-11 13:25:35:2535 [32minfo[39m: [32m📍 Public URL: https://cloudrix-api.onrender.com[39m
+2026-05-11 13:25:35:2535 [31merror[39m: [31m❌ Database connection failed: querySrv ECONNREFUSED _mongodb._tcp.cloudrixsystems.nd9cnwb.mongodb.net[39m
+2026-05-11 14:18:37:1837 [32minfo[39m: [32m🚀 Server running in development mode[39m
+2026-05-11 14:18:37:1837 [32minfo[39m: [32m📡 Listening on port 5000[39m
+2026-05-11 14:18:37:1837 [32minfo[39m: [32m📍 Health check: http://localhost:5000/health[39m
+2026-05-11 14:18:37:1837 [32minfo[39m: [32m📍 Public URL: https://cloudrix-api.onrender.com[39m
+2026-05-11 14:18:37:1837 [31merror[39m: [31m❌ Database connection failed: querySrv ECONNREFUSED _mongodb._tcp.cloudrixsystems.nd9cnwb.mongodb.net[39m
+2026-05-11 14:28:23:2823 [32minfo[39m: [32m🚀 Server running in development mode[39m
+2026-05-11 14:28:23:2823 [32minfo[39m: [32m📡 Listening on port 5000[39m
+2026-05-11 14:28:23:2823 [32minfo[39m: [32m📍 Health check: http://localhost:5000/health[39m
+2026-05-11 14:28:23:2823 [32minfo[39m: [32m📍 Public URL: https://cloudrix-api.onrender.com[39m
+2026-05-11 14:28:26:2826 [32minfo[39m: [32m✅ MongoDB Connected: ac-h1sm48n-shard-00-02.nd9cnwb.mongodb.net[39m
+2026-05-17 10:15:03:153 [32minfo[39m: [32m🚀 Server running in development mode[39m
+2026-05-17 10:15:03:153 [32minfo[39m: [32m📡 Listening on port 5000[39m
+2026-05-17 10:15:03:153 [32minfo[39m: [32m📍 Health check: http://localhost:5000/health[39m
+2026-05-17 10:15:03:153 [32minfo[39m: [32m📍 Public URL: https://cloudrix-api.onrender.com[39m
+2026-05-17 10:15:03:153 [31merror[39m: [31m❌ Database connection failed: querySrv ECONNREFUSED _mongodb._tcp.cloudrixsystems.nd9cnwb.mongodb.net[39m
+2026-05-23 19:25:42:2542 [32minfo[39m: [32m🚀 Server running in development mode[39m
+2026-05-23 19:25:42:2542 [32minfo[39m: [32m📡 Listening on port 5000[39m
+2026-05-23 19:25:42:2542 [32minfo[39m: [32m📍 Health check: http://localhost:5000/health[39m
+2026-05-23 19:25:42:2542 [32minfo[39m: [32m📍 Public URL: https://cloudrix-api.onrender.com[39m
+2026-05-23 20:19:23:1923 [32minfo[39m: [32m🚀 Server running in development mode[39m
+2026-05-23 20:19:23:1923 [32minfo[39m: [32m📡 Listening on port 5000[39m
+2026-05-23 20:19:23:1923 [32minfo[39m: [32m📍 Health check: http://localhost:5000/health[39m
+2026-05-23 20:19:23:1923 [32minfo[39m: [32m📍 Public URL: https://cloudrix-api.onrender.com[39m
+2026-05-23 20:19:23:1923 [31merror[39m: [31m❌ Database connection failed: querySrv ECONNREFUSED _mongodb._tcp.cloudrixsystems.nd9cnwb.mongodb.net[39m

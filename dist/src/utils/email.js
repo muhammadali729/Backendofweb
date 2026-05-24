@@ -1,55 +1,59 @@
-import nodemailer from 'nodemailer';
-import { logger } from './logger';
-
-interface EmailOptions {
-  to: string;
-  subject: string;
-  html: string;
-  text?: string;
-}
-
-export const sendEmail = async (options: EmailOptions): Promise<void> => {
-  try {
-    // Create transporter
-    const transporter = nodemailer.createTransport({
-      host: process.env.EMAIL_HOST,
-      port: parseInt(process.env.EMAIL_PORT || '587'),
-      secure: false, // true for 465, false for other ports
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
-      },
+"use strict";
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
-
-    // Email options
-    const mailOptions = {
-      from: process.env.EMAIL_FROM || 'support@cloudrixsystems.com',
-      to: options.to,
-      subject: options.subject,
-      html: options.html,
-      text: options.text || options.html.replace(/<[^>]*>/g, ''),
-    };
-
-    // Send email
-    const info = await transporter.sendMail(mailOptions);
-
-    logger.info('Email sent successfully', {
-      messageId: info.messageId,
-      to: options.to,
-      subject: options.subject,
-    });
-
-  } catch (error) {
-    logger.error('Email sending failed:', error);
-    throw new Error('Email sending failed');
-  }
 };
-
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.emailTemplates = exports.sendEmail = void 0;
+const nodemailer_1 = __importDefault(require("nodemailer"));
+const logger_1 = require("./logger");
+const sendEmail = (options) => __awaiter(void 0, void 0, void 0, function* () {
+    try {
+        // Create transporter
+        const transporter = nodemailer_1.default.createTransporter({
+            host: process.env.EMAIL_HOST,
+            port: parseInt(process.env.EMAIL_PORT || '587'),
+            secure: false, // true for 465, false for other ports
+            auth: {
+                user: process.env.EMAIL_USER,
+                pass: process.env.EMAIL_PASS,
+            },
+        });
+        // Email options
+        const mailOptions = {
+            from: process.env.EMAIL_FROM || 'support@cloudrixsystems.com',
+            to: options.to,
+            subject: options.subject,
+            html: options.html,
+            text: options.text || options.html.replace(/<[^>]*>/g, ''),
+        };
+        // Send email
+        const info = yield transporter.sendMail(mailOptions);
+        logger_1.logger.info('Email sent successfully', {
+            messageId: info.messageId,
+            to: options.to,
+            subject: options.subject,
+        });
+    }
+    catch (error) {
+        logger_1.logger.error('Email sending failed:', error);
+        throw new Error('Email sending failed');
+    }
+});
+exports.sendEmail = sendEmail;
 // Email templates
-export const emailTemplates = {
-  welcome: (name: string, verificationUrl: string) => ({
-    subject: 'Welcome to TechDev.inc!',
-    html: `
+exports.emailTemplates = {
+    welcome: (name, verificationUrl) => ({
+        subject: 'Welcome to TechDev.inc!',
+        html: `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
         <h1 style="color: #2563eb;">Welcome to TechDev.inc!</h1>
         <p>Hi ${name},</p>
@@ -60,11 +64,10 @@ export const emailTemplates = {
         <p>Best regards,<br>The TechDev.inc Team</p>
       </div>
     `,
-  }),
-
-  passwordReset: (name: string, resetUrl: string) => ({
-    subject: 'Password Reset Request',
-    html: `
+    }),
+    passwordReset: (name, resetUrl) => ({
+        subject: 'Password Reset Request',
+        html: `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
         <h1 style="color: #2563eb;">Password Reset Request</h1>
         <p>Hi ${name},</p>
@@ -76,11 +79,10 @@ export const emailTemplates = {
         <p>Best regards,<br>The TechDev.inc Team</p>
       </div>
     `,
-  }),
-
-  contactNotification: (contactData: any) => ({
-    subject: 'New Contact Form Submission',
-    html: `
+    }),
+    contactNotification: (contactData) => ({
+        subject: 'New Contact Form Submission',
+        html: `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
         <h1 style="color: #2563eb;">New Contact Form Submission</h1>
         <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; margin: 20px 0;">
@@ -94,11 +96,10 @@ export const emailTemplates = {
         </div>
       </div>
     `,
-  }),
-
-  contactConfirmation: (name: string, message: string) => ({
-    subject: 'Thank you for contacting TechDev.inc',
-    html: `
+    }),
+    contactConfirmation: (name, message) => ({
+        subject: 'Thank you for contacting TechDev.inc',
+        html: `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
         <h1 style="color: #2563eb;">Thank you for reaching out!</h1>
         <p>Hi ${name},</p>
@@ -111,5 +112,5 @@ export const emailTemplates = {
         <p>Best regards,<br>The TechDev.inc Team</p>
       </div>
     `,
-  }),
-}; 
+    }),
+};

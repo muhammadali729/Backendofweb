@@ -1,6 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-// routes/service.ts
 const express_1 = require("express");
 const router = (0, express_1.Router)();
 const services = [
@@ -8,7 +7,7 @@ const services = [
     {
         id: "digital-marketing",
         slug: "digital-marketing",
-        image: "digital-marketing.jpg",
+        image: "digital-marketing.webp",
         title: "Digital Marketing",
         description: "Data-driven marketing — social ads, content strategy and analytics that drive measurable growth.",
         features: [],
@@ -21,7 +20,7 @@ const services = [
     {
         id: "creative-design",
         slug: "creative-design-services",
-        image: "creative-design.jpg",
+        image: "creative-design.webp",
         title: "Creative Design Services",
         description: "Logos, UI/UX, marketing materials and full branding packages that tell your story visually.",
         features: [],
@@ -34,7 +33,7 @@ const services = [
     {
         id: "website-dev",
         slug: "custom-website-development",
-        image: "website-dev.jpg",
+        image: "website-dev.webp",
         title: "Web & App Development",
         description: "Custom websites, mobile apps, and eCommerce platforms built to perform.",
         features: [],
@@ -47,7 +46,7 @@ const services = [
     {
         id: "amazon-az",
         slug: "/management/amazon",
-        image: "amazon-az.jpg",
+        image: "amazon-az.webp",
         title: "Amazon A-Z Management",
         description: "Complete Amazon store management — product research, listing optimization, PPC campaigns and inventory control to boost sales.",
         features: [],
@@ -60,7 +59,7 @@ const services = [
     {
         id: "ai-chatbot",
         slug: "ai-chatbot-development",
-        image: "ai-chatbot.jpg",
+        image: "ai-chatbot.webp",
         title: "AI Chatbot Development",
         description: "Conversational AI that automates support, qualifies leads and integrates with your CRM.",
         features: [],
@@ -74,7 +73,7 @@ const services = [
     {
         id: "social-media",
         slug: "social-media-marketing",
-        image: "social-media.jpg",
+        image: "social-media.webp",
         title: "Social Media Marketing",
         description: "Content creation, scheduling and ads to grow your social presence and engagement.",
         features: [],
@@ -87,7 +86,7 @@ const services = [
     {
         id: "ads-management",
         slug: "/digital-marketing?section=advertising",
-        image: "ads-management.jpg",
+        image: "ads-management.webp",
         title: "Advertising & Promotion",
         description: "Campaign creation and management across Google, Facebook and Amazon to drive targeted revenue.",
         features: [],
@@ -100,7 +99,7 @@ const services = [
     {
         id: "seo",
         slug: "seo-optimization",
-        image: "seo.jpg",
+        image: "seo.webp",
         title: "SEO Optimization",
         description: "Technical and content SEO to increase organic visibility and improve rankings.",
         features: [],
@@ -114,7 +113,7 @@ const services = [
     {
         id: "logo-design",
         slug: "logo-design",
-        image: "logo-design.jpg",
+        image: "logo-design.webp",
         title: "Logo Design",
         description: "Memorable, versatile logos and complete brand kits for consistent recognition across all channels.",
         features: [],
@@ -127,7 +126,7 @@ const services = [
     {
         id: "book-cover",
         slug: "/creative-design?section=book-cover",
-        image: "book-cover.jpg",
+        image: "book-cover.webp",
         title: "Book Cover Design",
         description: "Attention-grabbing covers for eBook and print that fit your genre and marketing goals.",
         features: [],
@@ -140,7 +139,7 @@ const services = [
     {
         id: "3d-models",
         slug: "/creative-design?section=three-d-model",
-        image: "3d-models.jpg",
+        image: "3d-models.webp",
         title: "3D Model Design",
         description: "High-quality 3D models for products, characters and games — optimized for render and real-time engines.",
         features: [],
@@ -153,7 +152,7 @@ const services = [
     {
         id: "comic-art",
         slug: "/creative-design?section=comic-art",
-        image: "comic-art.jpg",
+        image: "comic-art.webp",
         title: "Comic Art Creation",
         description: "Comic-style illustrations, panel layouts and character art for stories, marketing and branding.",
         features: [],
@@ -166,7 +165,7 @@ const services = [
     {
         id: "character-design",
         slug: "character-design",
-        image: "character-design.jpg",
+        image: "character-design.webp",
         title: "Character Design",
         description: "Unique characters for games, animation and branding with turnarounds and expression sheets.",
         features: [],
@@ -179,7 +178,7 @@ const services = [
     {
         id: "anime-character",
         slug: "anime-character-design",
-        image: "anime-character.jpg",
+        image: "anime-character.webp",
         title: "Anime Character Design",
         description: "Anime-style characters with strong silhouettes, dynamic poses and clean linework.",
         features: [],
@@ -192,7 +191,7 @@ const services = [
     {
         id: "reference-sheet",
         slug: "reference-sheet",
-        image: "reference-sheet.jpg",
+        image: "reference-sheet.webp",
         title: "Reference Sheet Design",
         description: "Full reference sheets for characters including front/side/back views, palettes and expression breakdowns.",
         features: [],
@@ -206,7 +205,7 @@ const services = [
     {
         id: "website-dev-child",
         slug: "website-development",
-        image: "website-dev.jpg",
+        image: "website-dev.webp",
         title: "Custom Website Development",
         description: "Stunning, responsive websites built for performance and conversions.",
         features: [],
@@ -219,7 +218,7 @@ const services = [
     {
         id: "mobile-app",
         slug: "app-development",
-        image: "mobile-app.jpg",
+        image: "mobile-app.webp",
         title: "Mobile App Development",
         description: "Native and cross-platform mobile apps with polished UX.",
         features: [],
@@ -232,7 +231,7 @@ const services = [
     {
         id: "ecommerce",
         slug: "ecommerce-solutions",
-        image: "ecommerce.jpg",
+        image: "ecommerce.webp",
         title: "E-commerce Solutions",
         description: "End-to-end eCommerce stores — product setup, checkout, payment integration.",
         features: [],
@@ -245,7 +244,7 @@ const services = [
     {
         id: "website-management",
         slug: "website-management",
-        image: "website-management.jpg",
+        image: "website-management.webp",
         title: "Website Management",
         description: "Ongoing site maintenance, updates, backups and security monitoring.",
         features: [],
@@ -259,7 +258,7 @@ const services = [
     {
         id: "amazon-product-research",
         slug: "/management/amazon",
-        image: "amazon-product-research.jpg",
+        image: "amazon-product-research.webp",
         title: "Amazon Product Research",
         description: "In-depth market analysis, competitor research, and profitable product identification for Amazon success.",
         features: [],
@@ -272,7 +271,7 @@ const services = [
     {
         id: "amazon-listing-optimization",
         slug: "/management/amazon",
-        image: "amazon-product-research.jpg",
+        image: "amazon-product-research.webp",
         title: "Amazon Listing Optimization",
         description: "SEO-optimized titles, bullet points, descriptions and A+ content to maximize visibility and conversions.",
         features: [],
@@ -285,7 +284,7 @@ const services = [
     {
         id: "amazon-ppc-campaigns",
         slug: "/management/amazon",
-        image: "amazon-product-research.jpg",
+        image: "amazon-product-research.webp",
         title: "Amazon PPC Campaigns",
         description: "Strategic sponsored ads management to increase sales while maintaining profitable ACOS and ROAS.",
         features: [],
@@ -298,7 +297,7 @@ const services = [
     {
         id: "amazon-inventory-management",
         slug: "/management/amazon",
-        image: "amazon-product-research.jpg",
+        image: "amazon-product-research.webp",
         title: "Amazon Inventory Management",
         description: "Smart inventory planning, FBA shipment coordination, and stock level optimization to prevent stockouts.",
         features: [],
@@ -312,7 +311,7 @@ const services = [
     {
         id: "shopify-store-setup",
         slug: "/management/shopify",
-        image: "shopify-store-setup.jpg",
+        image: "shopify-store-setup.webp",
         title: "Shopify Store Setup",
         description: "Complete store creation with custom themes, payment integration, and conversion-optimized design.",
         features: [],
@@ -325,7 +324,7 @@ const services = [
     {
         id: "shopify-app-integration",
         slug: "/management/shopify",
-        image: "mobile-app.jpg",
+        image: "mobile-app.webp",
         title: "Shopify App Integration",
         description: "Essential app installation and configuration for marketing, analytics, and customer support automation.",
         features: [],
@@ -338,7 +337,7 @@ const services = [
     {
         id: "shopify-seo-optimization",
         slug: "seo-optimization",
-        image: "seo.jpg",
+        image: "seo.webp",
         title: "Shopify SEO Optimization",
         description: "On-page SEO, meta tags, schema markup, and site speed optimization for better search rankings.",
         features: [],
@@ -352,7 +351,7 @@ const services = [
     {
         id: "tiktok-content-strategy",
         slug: "/management/tiktok",
-        image: "tiktok-management.jpg",
+        image: "tiktok-management.webp",
         title: "TikTok Management",
         description: "Viral content planning, trend analysis, and creative video concepts that engage your target audience.",
         features: [],
@@ -365,7 +364,7 @@ const services = [
     {
         id: "tiktok-video-production",
         slug: "/management/tiktok",
-        image: "tiktok-management.jpg",
+        image: "tiktok-management.webp",
         title: "TikTok Video Production",
         description: "Professional video editing, effects, music sync, and storytelling for maximum engagement and shares.",
         features: [],
@@ -378,7 +377,7 @@ const services = [
     {
         id: "tiktok-ads-management",
         slug: "/management/tiktok",
-        image: "tiktok-management.jpg",
+        image: "tiktok-management.webp",
         title: "TikTok Ads Management",
         description: "Targeted ad campaigns, audience optimization, and performance tracking to drive conversions and growth.",
         features: [],
@@ -392,7 +391,7 @@ const services = [
     {
         id: "chatbot-overview",
         slug: "chatbot-service",
-        image: "chatbot-faq.jpg",
+        image: "chatbot-faq.webp",
         title: "Chatbot Overview",
         description: "Comprehensive AI chatbot capabilities, features, and benefits for automating customer interactions.",
         features: [],
@@ -405,7 +404,7 @@ const services = [
     {
         id: "chatbot-integration",
         slug: "chatbot-integration",
-        image: "chatbot-integration.jpg",
+        image: "chatbot-integration.webp",
         title: "Chatbot Integration",
         description: "Seamless integration with your website, CRM, social media, and existing business systems.",
         features: [],
@@ -418,7 +417,7 @@ const services = [
     {
         id: "chatbot-faq",
         slug: "chatbot-faq",
-        image: "chatbot-faq.jpg",
+        image: "chatbot-integration.webp",
         title: "Chatbot FAQ",
         description: "Common questions and answers about AI chatbot functionality, setup process, and ongoing support.",
         features: [],
@@ -431,7 +430,7 @@ const services = [
     {
         id: "chatbot-pricing",
         slug: "chatbot-pricing",
-        image: "chatbot-pricing.png",
+        image: "chatbot-integration.webp",
         title: "Chatbot Pricing",
         description: "Transparent pricing plans for AI chatbot development, customization, and monthly maintenance packages.",
         features: [],
@@ -442,19 +441,50 @@ const services = [
         glowColor: "shadow-yellow-500/50"
     }
 ];
+// ==================== HELPER FUNCTIONS ====================
+/**
+ * 🔥 Get base URL based on environment
+ * Production: Render URL ya custom domain
+ * Development: localhost
+ */
+const getBaseUrl = () => {
+    // Production (Render) URLs
+    if (process.env.NODE_ENV === 'production') {
+        // Render automatically provides this
+        if (process.env.RENDER_EXTERNAL_URL) {
+            return process.env.RENDER_EXTERNAL_URL;
+        }
+        // Custom domain agar ho to
+        if (process.env.CUSTOM_DOMAIN) {
+            return `https://${process.env.CUSTOM_DOMAIN}`;
+        }
+        // Default Render URL
+        return 'https://cloudrix-api.onrender.com';
+    }
+    // Development
+    return process.env.HOST || 'http://localhost:5000';
+};
+/**
+ * 🔥 Get full image URL
+ */
+const getImageUrl = (imagePath) => {
+    const baseUrl = getBaseUrl();
+    // Remove duplicate slashes
+    return `${baseUrl}/images/${imagePath}`.replace(/([^:]\/)\/+/g, '$1');
+};
 // Helper: build nested structure
-const buildTree = (flat, host) => {
+const buildTree = (flat) => {
     const map = {};
     const roots = [];
     flat.forEach((s) => {
-        map[s.id] = Object.assign(Object.assign({}, s), { image: `/images/${s.image}`, children: [] });
+        map[s.id] = Object.assign(Object.assign({}, s), { image: getImageUrl(s.image), children: [] });
     });
     flat.forEach((s) => {
         var _a;
-        if (s.parentId) {
+        if (s.parentId && map[s.parentId]) {
             (_a = map[s.parentId]) === null || _a === void 0 ? void 0 : _a.children.push(map[s.id]);
         }
-        else {
+        else if (!s.parentId) {
             roots.push(map[s.id]);
         }
     });
@@ -466,53 +496,103 @@ const buildTree = (flat, host) => {
     sortRecursive(roots);
     return roots;
 };
-// GET /api/services (flat list)
+// ==================== API ENDPOINTS ====================
+/**
+ * GET /api/services - Flat list of all services
+ */
 router.get("/", (req, res) => {
     try {
         console.log("📥 GET /api/services - Fetching flat services list");
-        const host = process.env.HOST || `http://localhost:5173`;
         const { visible } = req.query;
-        let list = [...services].map(s => (Object.assign(Object.assign({}, s), { image: `${host}/public/images/${s.image}` })));
+        let list = [...services];
+        // Filter by visibility if requested
         if (typeof visible === "string") {
             const v = visible.toLowerCase();
             if (v === "true" || v === "1") {
                 list = list.filter((s) => s.visible !== false);
             }
         }
-        console.log(`📤 Returning ${list.length} services (flat)`);
-        res.json(list);
+        // Add full image URLs
+        const enrichedList = list.map(s => (Object.assign(Object.assign({}, s), { image: getImageUrl(s.image) })));
+        console.log(`📤 Returning ${enrichedList.length} services (flat)`);
+        res.json({
+            success: true,
+            count: enrichedList.length,
+            data: enrichedList
+        });
     }
     catch (error) {
         console.error("❌ Error in GET /api/services:", error);
-        res.status(500).json({ success: false, error: "Internal server error" });
+        res.status(500).json({
+            success: false,
+            error: "Internal server error"
+        });
     }
 });
-// GET /api/services/tree (nested tree)
+/**
+ * GET /api/services/tree - Nested tree structure
+ */
 router.get("/tree", (req, res) => {
     try {
         console.log("📥 GET /api/services/tree - Fetching services tree");
-        const host = process.env.HOST || `http://localhost:5173`;
         const { visible } = req.query;
         let list = [...services];
+        // Filter by visibility if requested
         if (typeof visible === "string") {
             const v = visible.toLowerCase();
             if (v === "true" || v === "1") {
                 list = list.filter((s) => s.visible !== false);
             }
         }
-        const nested = buildTree(list, host);
-        console.log(`📤 Returning ${nested.length} parent services with children (tree)`);
+        const nested = buildTree(list);
         // Debug log
+        console.log(`📤 Returning ${nested.length} parent services:`);
         nested.forEach((parent) => {
             var _a;
             console.log(`  └─ ${parent.title} (${((_a = parent.children) === null || _a === void 0 ? void 0 : _a.length) || 0} children)`);
         });
-        res.json(nested);
+        res.json({
+            success: true,
+            count: nested.length,
+            data: nested
+        });
     }
     catch (error) {
         console.error("❌ Error in GET /api/services/tree:", error);
-        res.status(500).json({ success: false, error: "Internal server error" });
+        res.status(500).json({
+            success: false,
+            error: "Internal server error"
+        });
     }
 });
-// ✅ IMPORTANT: Export router at the bottom
+/**
+ * GET /api/services/:id - Get single service by ID
+ */
+router.get("/:id", (req, res) => {
+    try {
+        const { id } = req.params;
+        console.log(`📥 GET /api/services/${id} - Fetching single service`);
+        const service = services.find(s => s.id === id);
+        if (!service) {
+            return res.status(404).json({
+                success: false,
+                error: "Service not found"
+            });
+        }
+        // Add full image URL
+        const enrichedService = Object.assign(Object.assign({}, service), { image: getImageUrl(service.image) });
+        res.json({
+            success: true,
+            data: enrichedService
+        });
+    }
+    catch (error) {
+        console.error(`❌ Error in GET /api/services/${req.params.id}:`, error);
+        res.status(500).json({
+            success: false,
+            error: "Internal server error"
+        });
+    }
+});
+// ✅ IMPORTANT: Export router
 exports.default = router;

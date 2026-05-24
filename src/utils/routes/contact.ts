@@ -61,7 +61,7 @@ router.post('/', [
 
     // Send notification email to admin
     await sendEmail({
-      to: process.env.EMAIL_FROM || 'admin@techdev.inc',
+      to: process.env.EMAIL_FROM || 'support@cloudrixsystems.com',
       subject: 'New Contact Form Submission',
       html: `
         <h2>New Contact Form Submission</h2>
